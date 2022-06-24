@@ -137,6 +137,29 @@
               "widthDefault": 60
             },
             "id": "83267bfd-6261-446d-b3c2-4d07e4687169"
+          },
+          {
+            "name": "deleted_at",
+            "comment": "",
+            "dataType": "TIMESTAMP",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.7216796875,
+              "widthComment": 60,
+              "widthDataType": 76.87060546875,
+              "widthDefault": 60
+            },
+            "id": "76402175-00c6-4816-a5ad-a1ed347ba515"
           }
         ],
         "ui": {
@@ -314,6 +337,29 @@
               "widthDefault": 60
             },
             "id": "4c746180-4859-409c-b5ee-74d7bf34167c"
+          },
+          {
+            "name": "deleted_at",
+            "comment": "",
+            "dataType": "TIMESTAM",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.7216796875,
+              "widthComment": 60,
+              "widthDataType": 68.19970703125,
+              "widthDefault": 60
+            },
+            "id": "12e84dae-b3cc-4816-98db-0fd5d36f0288"
           }
         ],
         "ui": {
@@ -345,7 +391,7 @@
             "2ec4f143-8083-4f71-bdae-108cff233a25"
           ],
           "x": 487.7822265625,
-          "y": 203.5,
+          "y": 213.75,
           "direction": "right"
         },
         "end": {
@@ -354,7 +400,7 @@
             "bd0f0d6c-0f7b-401c-a4e9-9561427c4ae8"
           ],
           "x": 608,
-          "y": 202.25,
+          "y": 212.5,
           "direction": "left"
         },
         "constraintName": "fk_blocks_to_slots",
