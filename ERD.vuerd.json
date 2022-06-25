@@ -250,7 +250,7 @@
             "name": "status",
             "comment": "",
             "dataType": "SMALLINT",
-            "default": "",
+            "default": "1",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
@@ -363,10 +363,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 608,
           "top": 96,
-          "zIndex": 46,
+          "zIndex": 48,
           "widthName": 60,
           "widthComment": 60
         },
