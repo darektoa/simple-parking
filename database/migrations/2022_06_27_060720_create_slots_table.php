@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('slots', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('block_id')->constrained();
+            $table->string('name', 20);
+            $table->smallInteger('status')->default(1);
+            $table->timestamp('used_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
