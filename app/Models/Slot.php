@@ -11,4 +11,9 @@ class Slot extends Model
     use HasFactory, SoftDeletes;
     
     protected $guarded = ['id'];
+
+
+    public function block() {
+        return $this->belongsTo(Block::class);
+    }
 }
