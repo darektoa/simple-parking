@@ -12,7 +12,7 @@ class Slot extends Model
     
     protected $guarded = ['id'];
 
-    protected $statuses = [
+    protected $status_names = [
         1 => 'Unused',
         2 => 'Used',
     ];
