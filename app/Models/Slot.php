@@ -12,6 +12,11 @@ class Slot extends Model
     
     protected $guarded = ['id'];
 
+    protected $statuses = [
+        1 => 'Unused',
+        2 => 'Used',
+    ];
+
 
     public function block() {
         return $this->belongsTo(Block::class);
