@@ -17,6 +17,7 @@ class SlotResource extends JsonResource
         return [
             'id'     => $this->id,
             'name'   => $this->name,
+            'block'  => BlockResource::make($this->whenLoaded('block')),
             'status' => [
                 'id'    => $this->status,
                 'name'  => $this->statusName,
