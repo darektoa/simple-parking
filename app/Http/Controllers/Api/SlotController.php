@@ -11,8 +11,11 @@ use Illuminate\Http\Request;
 
 class SlotController extends Controller
 {
-    public function index() {
-        $slots = Slot::with('block')->get();
+    public function index(Request $request) {
+        $status = $request->status; 
+        $slots  = Slot::with('block')->get();
+
+        if($status) $slots = $slots->where('status', $status);
 
         return ResponseHelper::make(
             SlotResource::collection($slots)
