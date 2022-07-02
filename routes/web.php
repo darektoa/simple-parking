@@ -17,5 +17,6 @@ Route::prefix('/v1')->group(function() {
     // SLOT
     Route::prefix('/slots')->group(function() {
         Route::get('/', [SlotController::class, 'index']);
+        Route::get('/{slot:id}', [SlotController::class, 'show']);
     });
 });
