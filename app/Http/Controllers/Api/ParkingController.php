@@ -15,7 +15,7 @@ class ParkingController extends Controller
     public function enter(Request $request) {
         try{
             $validator = Validator::make($request->all(), [
-                'slot_id'   => 'exists:slots,id',
+                'slot_id'   => 'exists:slots,id,status,1',
             ]);
 
             if($validator->fails()) {
