@@ -15,13 +15,14 @@ class SlotResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id'     => $this->id,
-            'name'   => $this->name,
-            'block'  => BlockResource::make($this->whenLoaded('block')),
-            'status' => [
+            'id'      => $this->id,
+            'name'    => $this->name,
+            'block'   => BlockResource::make($this->whenLoaded('block')),
+            'status'  => [
                 'id'    => $this->status,
                 'name'  => $this->statusName,
-            ]
+            ],
+            'used_at' => $this->whenNotNull($this->used_at),
         ];
     }
 }
