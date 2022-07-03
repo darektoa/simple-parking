@@ -19,4 +19,9 @@ Route::prefix('/v1')->group(function() {
         Route::get('/', [SlotController::class, 'index']);
         Route::get('/{slot:id}', [SlotController::class, 'show']);
     });
+    
+    // PARKING
+    Route::prefix('/parking')->group(function() {
+        Route::post('/enter', [ParkingController::class, 'enter']);
+    });
 });
