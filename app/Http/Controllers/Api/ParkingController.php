@@ -40,4 +40,34 @@ class ParkingController extends Controller
             );
         }
     }
+    
+    
+    public function exit(Request $request) {
+        try{
+            $validator = Validator::make($request->all(), [
+                'slot_id'   => 'exists:slots,id,status,2',
+            ]);
+
+            if($validator->fails()) {
+                $errors = $validator->errors()->all();
+                throw new ErrorException('Unproccessable', 422, $errors);
+            }
+
+            $slot = Slot::find((int) $request->slot_id);
+            $slot->update([
+                'status'    => 1,
+                'used_at'   => null,
+            ]);
+
+            return ResponseHelper::make(
+                SlotResource::make($slot)
+            );
+        }catch(ErrorException $err) {
+            return ResponseHelper::error(
+                $err->getErrors(),
+                $err->getMessage(),
+                $err->getCode(),
+            );
+        }
+    }
 }
