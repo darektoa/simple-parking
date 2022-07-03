@@ -23,5 +23,6 @@ Route::prefix('/v1')->group(function() {
     // PARKING
     Route::prefix('/parking')->group(function() {
         Route::post('/enter', [ParkingController::class, 'enter']);
+        Route::post('/exit', [ParkingController::class, 'exit']);
     });
 });
